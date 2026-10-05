@@ -1,0 +1,14 @@
+{
+  "name": "word-bluff-multiplayer",
+  "private": true,
+  "workspaces": ["client", "server"],
+  "scripts": {
+    "dev": "concurrently \"npm:dev:server\" \"npm:dev:client\"",
+    "dev:server": "npm --workspace server run dev",
+    "dev:client": "npm --workspace client run dev",
+    "build": "npm --workspace client run build",
+    "start": "npm --workspace server start",
+    "test": "npm --workspace server test"
+  },
+  "devDependencies": { "concurrently": "^9.1.2" }
+}
